@@ -14,20 +14,20 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-3">
             <span className="text-2xl font-display font-bold tracking-tight neon-text-green">TENNIS</span>
-            <span className="text-2xl font-display font-light text-black/60 tracking-tight">EDGE</span>
+            <span className="text-2xl font-display font-light text-black tracking-tight">EDGE</span>
             <span className="ml-2 hidden sm:inline-block px-2 py-0.5 text-xs font-display tracking-widest border border-neon-green/30 text-neon-green/70 rounded uppercase">
               Beta
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-white/40 font-mono hidden sm:block">
+            <span className="text-xs text-black font-mono hidden sm:block">
               {new Date().toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" })} МСК
             </span>
             <button
               className="relative p-2 rounded-lg hover:bg-white/5 transition-colors"
               onClick={() => onTabChange("alerts")}
             >
-              <Icon name="Bell" size={18} className="text-white/60" />
+              <Icon name="Bell" size={18} className="text-black" />
               {unread > 0 && (
                 <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full text-[10px] text-white flex items-center justify-center font-bold">
                   {unread}
@@ -35,7 +35,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
               )}
             </button>
             <button className="p-2 rounded-lg hover:bg-white/5 transition-colors">
-              <Icon name="Settings" size={18} className="text-white/60" />
+              <Icon name="Settings" size={18} className="text-black" />
             </button>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
           <div className="overflow-hidden flex-1">
             <div className="flex animate-ticker whitespace-nowrap">
               {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-                <span key={i} className="inline-block px-6 text-xs text-white/60 py-1.5 border-r border-white/5">
+                <span key={i} className="inline-block px-6 text-xs text-black py-1.5 border-r border-white/5">
                   {item}
                 </span>
               ))}
@@ -70,7 +70,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
                 className={`relative flex items-center gap-2 px-5 py-3.5 text-sm font-display tracking-wide transition-all ${
                   activeTab === item.id
                     ? "text-neon-green"
-                    : "text-white/50 hover:text-white/80"
+                    : "text-black hover:text-black/70"
                 }`}
               >
                 <Icon name={item.icon} size={15} />

@@ -14,7 +14,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-3">
             <span className="text-2xl font-display font-bold tracking-tight neon-text-green">TENNIS</span>
-            <span className="text-2xl font-display font-light text-white/60 tracking-tight">EDGE</span>
+            <span className="text-2xl font-display font-light text-black/60 tracking-tight">EDGE</span>
             <span className="ml-2 hidden sm:inline-block px-2 py-0.5 text-xs font-display tracking-widest border border-neon-green/30 text-neon-green/70 rounded uppercase">
               Beta
             </span>

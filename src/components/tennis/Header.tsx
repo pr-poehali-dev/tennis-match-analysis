@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header({ activeTab, unread, onTabChange }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-50 border-b border-court-border bg-court-dark/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-3">
@@ -42,7 +42,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
       </div>
 
       {/* Ticker */}
-      <div className="border-t border-court-border bg-court-mid/50 overflow-hidden">
+      <div className="border-t border-gray-200 bg-gray-50 overflow-hidden">
         <div className="flex items-center">
           <div className="shrink-0 px-3 py-1.5 bg-neon-green/10 border-r border-court-border">
             <span className="text-xs font-display font-semibold neon-text-green tracking-widest">LIVE</span>
@@ -60,7 +60,7 @@ export default function Header({ activeTab, unread, onTabChange }: HeaderProps) 
       </div>
 
       {/* Nav */}
-      <nav className="border-b border-court-border bg-court-dark/95">
+      <nav className="border-b border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex gap-0">
             {NAV_ITEMS.map(item => (
